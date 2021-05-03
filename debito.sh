@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Agrego un comentario
 #4	(16 DIG)	VISA
 #51-55	(16 DIG)	MASTERCARD
 #34-37	(15 DIG)	AMERICAN EXPRESS

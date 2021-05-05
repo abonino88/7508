@@ -7,7 +7,7 @@
 # Catedra Ing. Osvaldo Clua
 #
 #
-# Conversor de Tamperatura
+# Conversor de Temperatura
 #
 # *************************************************************************
 
@@ -43,13 +43,13 @@ mostrar_ejemplos(){
 verificar_argumento(){
   validate_number=^-?[0-9]+([.][0-9]+)?$;
   if ![[ $1 =~ $validate_number ]]; then
-    return 0
-  else
     return 1
+  else
+    return 0
   fi
 }
 
-convertir_a_fahreheit(){
+convertir_a_fahrenheit(){
    RESULT=`echo "scale=2, (9/5) * $1 + 32" | bc `
    echo "  $1 Celsius = $RESULT Fahrenheit"
    echo ""
@@ -74,14 +74,18 @@ fi
 
 if [ $# -eq 2 ]; then
   if [ $1 -eq '-c' ] -o [ $1 -eq '--celsius' ]; then
-     if [ $(verificar_argumeto $2) ]
-     convertir_a_fahrenheit $2
+     if [ $(verificar_argumeto $2) ]; then
+        convertir_a_fahrenheit $2
      exit 0
   if [ $1 -eq '-f' ] -o [ $1 -eq '--fahreheit' ]; then
-     if [ $(verificar_argumeto $2) ]
-     convertir_a_celsius $2
+     if [ $(verificar_argumeto $2) ];then
+        convertir_a_celsius $2
      exit 0
 fi
+
+echo "  ERROR: No se pudo procesar su solicitud..."
+echo "  Verifique el correcto uso de parametros y valores ingresaods en el comando."
+echo "  ---------------------------------------------------------------------------"
 
 mostrar_ayuda
 exit 0

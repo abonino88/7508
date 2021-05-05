@@ -11,6 +11,8 @@
 #
 # *************************************************************************
 
+ARGUMENTO=""
+
 mostrar_ayuda(){
   echo " convertir_tmp.sh                                                        "
   echo " Listado de parametros                                                   "
@@ -41,8 +43,8 @@ mostrar_ejemplos(){
 }
 
 verificar_argumento(){
-  #validate_number=^-?[0-9]+([.][0-9]+)?$
-  if [ $1 =~ "^-?[0-9]+([.][0-9]+)?$" ] ; then
+  CADENA='^-?[0-9]+([.][0-9]+)?$'
+  if [[  $ARGUMENTO =~ $CADENA ]]  ; then
     return 0
   else
     return 1
@@ -61,17 +63,20 @@ convertir_a_celsius(){
    echo ""
 }
 
-
 if [ $# == 0 ];then
-  if [ $# == 1 ];then
+  mostrar_ayuda
+  exit 0
+fi
+
+
+if [ $# == 1 ];then
     if [ $1 == '-h' ] || [ $1 == 'help' ]; then
       mostrar_ayuda
       exit 0
     fi
-  fi
 fi
 
-if [ $1 == 1 ];then
+if [ $# == 1 ];then
   if [ $1 == '-e' ] || [ $1 == '--examples' ]; then
     mostrar_ejemplos
     exit 0
@@ -79,16 +84,18 @@ if [ $1 == 1 ];then
 fi
 
 if [ $# -eq 2 ]; then
+  ARGUMENTO=$2
   if [ $1 == '-c' ] || [ $1 == '--celsius' ]; then
-     if [ $(verificar_argumento $2) ]; then
+     if   verificar_argumento ; then
        convertir_a_fahrenheit $2
        exit 0
      fi
   fi
   if [ $1 == '-f' ] || [ $1 == '--fahrenheit' ]; then
-#     if [ $(verificar_argumento $2) ];then
+     if  verificar_argumento ;then
         convertir_a_celsius $2
      exit 0
+     fi
   fi
 fi
 

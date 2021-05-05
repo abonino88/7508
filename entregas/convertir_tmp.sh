@@ -32,13 +32,13 @@ mostrar_ejemplos(){
   echo " Ejemplos de uso                                                         "
   echo " ----------------------------------------------------------------------- "
   echo " convertir_tmp.sh -c 50     convierte 50 grados celsius a fahrenheit     "
-  echo "     50 celsius =                                                        "
+  echo "     50 celsius = 122 fahrenheit                                         "
   echo " convertir_tmp.sh -f 43     convierte 43 grados fahrenheit a celsius     "
-  echo "     43 fahrenheit =                                                     "
+  echo "     43 fahrenheit = 6.11 celsius                                        "
   echo " convertir_tmp.sh -c -15    convierte -15 grados celsius a fahrenheit    "
-  echo "     -15 celsius =                                                       "
+  echo "     -15 celsius = 5 fehrenheit                                          "
   echo " convertir_tmp.sh -f -27.5  convierte -27.5 grados fahrenheit a celsius  "
-  echo "     -27.5 fahrenheit =                                                  "
+  echo "     -27.5 fahrenheit = -33.05 celsius                                   "
   echo " ------------------------------------------------------------------------"
 }
 

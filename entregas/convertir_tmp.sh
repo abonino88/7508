@@ -99,6 +99,8 @@ if [ $# -eq 2 ]; then
   fi
 fi
 
+echo ""
+echo "  ---------------------------------------------------------------------------"
 echo "  ERROR: No se pudo procesar su solicitud..."
 echo "  Verifique el correcto uso de parametros y valores ingresaods en el comando."
 echo "  ---------------------------------------------------------------------------"

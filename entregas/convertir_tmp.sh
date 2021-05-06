@@ -26,6 +26,7 @@ mostrar_ayuda(){
   echo "   NOTA: los valores de temperaturas pueden ser positivos o negativos    "
   echo "   y debe usar el . como separador decimal                               "
   echo " ------------------------------------------------------------------------"
+  echo ""
 }   
 
 mostrar_ejemplos(){
@@ -42,6 +43,7 @@ mostrar_ejemplos(){
   echo " convertir_tmp.sh -f -27.5  convierte -27.5 grados fahrenheit a celsius  "
   echo "     -27.5 fahrenheit = -33.05 celsius                                   "
   echo " ------------------------------------------------------------------------"
+  echo ""
 }
 
 verificar_argumento(){
@@ -106,6 +108,7 @@ echo " -------------------------------------------------------------------------
 echo " ERROR: No se pudo procesar su solicitud..."
 echo " Verifique el correcto uso de parametros y valores ingresaods en el comando."
 echo " ---------------------------------------------------------------------------"
+echo ""
 
 mostrar_ayuda
 exit 0

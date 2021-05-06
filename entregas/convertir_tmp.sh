@@ -14,6 +14,7 @@
 ARGUMENTO=""
 
 mostrar_ayuda(){
+  echo ""
   echo " convertir_tmp.sh                                                        "
   echo " Listado de parametros                                                   "
   echo " ----------------------------------------------------------------------- "
@@ -28,6 +29,7 @@ mostrar_ayuda(){
 }   
 
 mostrar_ejemplos(){
+  echo ""
   echo " convertir_tmp.sh                                                        "
   echo " Ejemplos de uso                                                         "
   echo " ----------------------------------------------------------------------- "
@@ -100,10 +102,10 @@ if [ $# -eq 2 ]; then
 fi
 
 echo ""
-echo "  ---------------------------------------------------------------------------"
-echo "  ERROR: No se pudo procesar su solicitud..."
-echo "  Verifique el correcto uso de parametros y valores ingresaods en el comando."
-echo "  ---------------------------------------------------------------------------"
+echo " ---------------------------------------------------------------------------"
+echo " ERROR: No se pudo procesar su solicitud..."
+echo " Verifique el correcto uso de parametros y valores ingresaods en el comando."
+echo " ---------------------------------------------------------------------------"
 
 mostrar_ayuda
 exit 0
